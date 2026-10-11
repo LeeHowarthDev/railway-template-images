@@ -16,6 +16,7 @@ RUN apt-get update \
 
 # Install uv, the Python environment manager
 ENV UV_INSTALL_DIR=/usr/local/bin
+ENV UV_PYTHON_INSTALL_DIR=/opt/uv-python
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh \
     && uv --version
 
