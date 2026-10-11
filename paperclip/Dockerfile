@@ -31,6 +31,10 @@ RUN git clone --depth 1 --recurse-submodules \
     && chmod -R a+rX /opt/hermes \
     && hermes --help
 
+# Prepare Hermes configuration for Paperclip's node user
+RUN mkdir -p /paperclip/.hermes \
+    && chown -R node:node /paperclip/.hermes
+
 # Preserve the existing Railway bootstrap
 COPY --chown=node:node railway-bootstrap.mjs /app/server/railway-bootstrap.mjs
 COPY railway-start.sh /usr/local/bin/railway-start.sh
