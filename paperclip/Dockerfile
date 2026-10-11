@@ -29,7 +29,7 @@ RUN git clone --depth 1 --recurse-submodules \
     && VIRTUAL_ENV=/opt/hermes/venv uv pip install -e "." \
     && ln -s /opt/hermes/venv/bin/hermes /usr/local/bin/hermes \
     && chmod -R a+rX /opt/hermes \
-    && hermes version
+    && hermes --help
 
 # Preserve the existing Railway bootstrap
 COPY --chown=node:node railway-bootstrap.mjs /app/server/railway-bootstrap.mjs
