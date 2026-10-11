@@ -27,7 +27,6 @@ RUN git clone --depth 1 --recurse-submodules \
     && uv venv /opt/hermes/venv --python 3.14 \
     && cd /opt/hermes/source \
     && VIRTUAL_ENV=/opt/hermes/venv uv pip install -e "." \
-    && VIRTUAL_ENV=/opt/hermes/venv uv pip install -e "./mini-swe-agent" \
     && ln -s /opt/hermes/venv/bin/hermes /usr/local/bin/hermes \
     && chmod -R a+rX /opt/hermes \
     && hermes version
