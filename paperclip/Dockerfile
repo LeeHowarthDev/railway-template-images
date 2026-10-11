@@ -1,4 +1,4 @@
-# Rebuild Hermes with Python stored outside the Railway volume
+# Rebuild Hermes with Python stored outside the Railway volume.
 # ByteGraffiti HQ - Paperclip + Hermes
 # Based on the official Paperclip image.
 # Preserves the Railway bootstrap and startup scripts.
